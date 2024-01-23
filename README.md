@@ -1,4 +1,4 @@
-# Crypto Rust Project
+# Crypto-Rust-Project
 
 This repository contains the Rust-based blockchain project, exploring the core concepts of a cryptocurrency system. The project is an educational journey through blockchain technology, smart contracts, and consensus algorithms implemented in Rust.
 
@@ -11,6 +11,10 @@ The `src` directory contains the source code for the project, including the main
 Below is a conceptual representation of the project's underlying technology:
 
 ![Blockchain Technology Concept](photo.png)
+
+## Example - customization starting point
+
+![Blockchain Technology Concept](photo2.png)
 
 ## Getting Started
 
