@@ -12,6 +12,10 @@ Below is a conceptual representation of the project's underlying technology:
 
 ![Blockchain Technology Concept](photo.png)
 
+## Example - customization starting point
+
+![Blockchain Technology Concept](photo2.png)
+
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
