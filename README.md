@@ -1,4 +1,4 @@
-# Crypto Rust Project
+# Crypto-Rust-Project
 
 This repository contains the Rust-based blockchain project, exploring the core concepts of a cryptocurrency system. The project is an educational journey through blockchain technology, smart contracts, and consensus algorithms implemented in Rust.
 
