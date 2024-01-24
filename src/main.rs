@@ -1,3 +1,4 @@
+mod wallet;
 use std::time::{SystemTime, UNIX_EPOCH};
 use sha2::{Sha256, Digest};
 use std::fmt;
@@ -86,8 +87,18 @@ impl Blockchain {
         self.blocks.push(new_block);
     }
 }
-
 fn main() {
+    let keypair = wallet::generate_keypair();
+    match keypair {
+        Ok((secret_key, public_key)) => {
+            let address = wallet::generate_address(&public_key);
+            println!("Secret Key: {:?}", secret_key);
+            println!("Public Key: {:?}", public_key);
+            println!("Address: {}", address);
+        },
+        Err(e) => println!("Error generating keypair: {:?}", e),
+    }
+
     let mut blockchain = Blockchain::new();
 
     // Adding a block with a transaction
