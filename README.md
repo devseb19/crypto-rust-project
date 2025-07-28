@@ -1,25 +1,68 @@
+
 # Crypto-Rust-Project
 
-This repository contains the Rust-based blockchain project, exploring the core concepts of a cryptocurrency system. The project is an educational journey through blockchain technology, smart contracts, and consensus algorithms implemented in Rust.
+This repository contains a **Rust-based blockchain simulation**. It implements core cryptocurrency concepts:
 
-## Project Structure
+- Wallet generation
+- Balance tracking
+- Transaction processing
+- Block mining
+- Persistent blockchain storage
 
-The `src` directory contains the source code for the project, including the main blockchain implementation and other Rust modules that provide functionality such as transaction handling, block mining, and network communication.
+---
 
-## Visual Representation
+## Project Snapshot
 
-Below is a conceptual representation of the project's underlying technology:
+![Crypto Engine Gear](photo.png)
 
-![Blockchain Technology Concept](photo.png)
+---
 
-## Example - customization starting point
+## CLI Usage Guide
 
-![Blockchain Technology Concept](photo2.png)
+### Generate a Wallet
 
-## Getting Started
+```bash
+cargo run -- wallet-gen --name Alexa --fund 100000
+```
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+Creates a new wallet named `Alexa`, stores it, and optionally funds it.
 
-### Prerequisites
+---
 
-What things you need to install the software and how to install them.
+### Set or Get Balance
+
+```bash
+cargo run -- balance --set <name or address> --amount <u64>
+cargo run -- balance --get <name or address>
+```
+
+Manually assign or retrieve balance for a given address.
+
+---
+
+### Add a Block (Transaction)
+
+```bash
+cargo run -- block-add --from <name or address> --to <name or address> --amount <u64>
+```
+
+Transfers value and mines a new block. Fails if sender has insufficient funds.
+
+---
+
+### Show the Blockchain
+
+```bash
+cargo run -- blockchain-show
+```
+
+Prints a pretty view of all current blocks.
+
+---
+
+### Find a Wallet Address
+
+```bash
+cat wallets/<name>.json
+```
+  

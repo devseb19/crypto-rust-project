@@ -1,1 +1,4 @@
 /target
+wallets/
+data/blockchain.json
+target/
